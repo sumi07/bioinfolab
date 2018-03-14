@@ -23,11 +23,11 @@ int table[n1+1][n2+1];
 table[0][0]=0;
 int i,j;
  for( j=1;j<n2+1;j++)
-{ table[0][j] +=gap_penalty;
+{ table[0][j] =gap_penalty+table[0][j-1];
 }
 for( i=1;i<n1+1;i++)
 {
-table[i][0] +=gap_penalty;
+table[i][0] =gap_penalty+table[i-1][0];
 }
 for(i=0;i<n1;i++)
      {
@@ -78,8 +78,9 @@ for(i=0;i<n1;i++)
       {
         for(j=0;j<n2+1;j++)
         {
-          printf(" %5d",table[i][j]);
+          printf("  %5d",table[i][j]);
      }
+     printf("\n");
   }
 }
 
