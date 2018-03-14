@@ -41,15 +41,15 @@ for(i=0;i<n1;i++)
               y=table[i][j+1]+gap_penalty;
                if(score>=x && score>=y)
                  { 
-                    table[i][j]=score;
+                    table[i+1][j+1]=score;
                   }
                  if(x>=score && x>=y)
                   { 
-                    table[i][j]=x;
+                    table[i+1][j+1]=x;
                    }
                   if(y>=score && y>=x)
                   {
-                    table[i][j]=y;
+                    table[i+1][j+1]=y;
                   }
                 }
              else
@@ -60,15 +60,15 @@ for(i=0;i<n1;i++)
               y=table[i][j+1]+gap_penalty;
                if(score>=x && score>=y)
                  {
-                    table[i][j]=score;
+                    table[i+1][j+1]=score;
                   }
                  if(x>=score && x>=y)
                   {
-                    table[i][j]=x;
+                    table[i+1][j+1]=x;
                    }
                   if(y>=score && y>=x)
                   {
-                    table[i][j]=y;
+                    table[i+1][j+1]=y;
                   }
                 }
        
